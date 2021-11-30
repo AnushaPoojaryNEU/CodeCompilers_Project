@@ -1,4 +1,4 @@
-# Project name: Support System for Homeless Residents.
+Project name: Support System for Homeless Residents.
 
 Group Name: Code Compilers
 
