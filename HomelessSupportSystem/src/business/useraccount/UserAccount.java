@@ -4,10 +4,49 @@
  */
 package business.useraccount;
 
+import business.role.Role;
+
 /**
  *
  * @author anu61
  */
 public class UserAccount {
-    
+   private String username;
+   private String password;
+   private Role role;
+   private RoleType roleType;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public RoleType getRoleType() {
+        return roleType;
+    }
+
+    public void setRoleType(RoleType roleType) {
+        this.roleType = roleType;
+    }
+   
+   
 }
