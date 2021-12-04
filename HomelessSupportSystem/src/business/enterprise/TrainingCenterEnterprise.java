@@ -12,15 +12,14 @@ import java.util.List;
  *
  * @author geeth
  */
-public class HospitalEnterprise extends Enterprise {
-
-    public HospitalEnterprise(String name) {
-        super(name, EnterpriseType.HOSPITAL);
+public class TrainingCenterEnterprise extends Enterprise {
+    
+    public TrainingCenterEnterprise(String name) {
+        super(name, EnterpriseType.TRAINING_CENTER);
     }
 
     @Override
     public List<Role> getSupportedRole() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
-    
 }
