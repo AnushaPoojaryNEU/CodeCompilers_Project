@@ -48,8 +48,8 @@ public abstract class Enterprise extends Organization {
             return false;
         return true;
     }
-    
-    
+
+
     @Override
     public String toString() {
         return getName();
@@ -81,5 +81,5 @@ public abstract class Enterprise extends Organization {
         if (employeeToUserAcc != null)
             this.employeeToUserAcc = employeeToUserAcc;
     }
-    
+
 }

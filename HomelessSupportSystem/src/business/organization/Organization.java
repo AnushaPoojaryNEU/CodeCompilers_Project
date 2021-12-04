@@ -21,6 +21,8 @@ public abstract class Organization {
     private String name;
     private WorkQueue workQueue;
     
+   
+    
      public Organization(String name) {
         this.name = name;
         this.workQueue = workQueue;
@@ -66,6 +68,25 @@ public abstract class Organization {
     public void setWorkQueue(WorkQueue workQueue) {
         this.workQueue = workQueue;
     }
+    
+    public enum Type {
+    Counselor("Counselor Organization"), Doctor("Doctor Organization"),EmploymentTrainingOrganization("Employment Training Organization"), Admin("Admin Organization"),ShelterProviderOrganization("Shelter Provider Organization"), Nurse("Nurse Organization"),FoodProviderOrganization("Food Provider Organization");
+
+    private String value;
+        
+        private Type(String value) {
+            this.value = value;
+        }
+        
+        public String getValue() {
+            return value;
+        }
+    
+        @Override
+        public String toString() {
+            return value;
+        }
+   }
      
     public abstract List<Role> getSupportedRole();
     

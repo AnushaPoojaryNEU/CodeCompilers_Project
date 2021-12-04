@@ -4,10 +4,23 @@
  */
 package business.organization;
 
+import business.role.Role;
+import java.util.ArrayList;
+
 /**
  *
  * @author anu61
  */
-public class EmploymentTrainingOrganization {
+public class EmploymentTrainingOrganization extends Organization  {
     
+     public EmploymentTrainingOrganization() {
+        super(Type.Trainer.getValue());
+    }
+    
+    @Override
+    public ArrayList<Role> getSupportedRole() {
+        ArrayList<Role> roles = new ArrayList();
+        roles.add(new EmploymentTrainingRole());
+        return roles;
+    }
 }
