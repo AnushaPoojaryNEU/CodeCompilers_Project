@@ -5,6 +5,7 @@
 package business.useraccount;
 
 import business.role.Role;
+import java.util.Objects;
 
 /**
  *
@@ -14,7 +15,6 @@ public class UserAccount {
    private String username;
    private String password;
    private Role role;
-   private RoleType roleType;
 
     public String getUsername() {
         return username;
@@ -40,13 +40,22 @@ public class UserAccount {
         this.role = role;
     }
 
-    public RoleType getRoleType() {
-        return roleType;
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final UserAccount other = (UserAccount) obj;
+        if (!Objects.equals(this.username, other.username)) {
+            return false;
+        }
+        return true;
     }
-
-    public void setRoleType(RoleType roleType) {
-        this.roleType = roleType;
-    }
-   
    
 }
