@@ -4,10 +4,23 @@
  */
 package business.organization;
 
+import business.role.Role;
+import java.util.ArrayList;
+
 /**
  *
  * @author anu61
  */
-public class AdminOrganization {
+public class AdminOrganization extends Organization{
     
+     public AdminOrganization() {
+        super(Type.Admin.getValue());
+    }
+    
+    @Override
+    public ArrayList<Role> getSupportedRole() {
+        ArrayList<Role> roles = new ArrayList();
+        roles.add(new AdminRole());
+        return roles;
+    }
 }
