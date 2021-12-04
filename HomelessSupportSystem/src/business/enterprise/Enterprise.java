@@ -28,6 +28,27 @@ public abstract class Enterprise extends Organization {
         this.organizationDirectory = new OrganizationDirectory();
         employeeToUserAcc = new HashMap<>();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Enterprise other = (Enterprise) obj;
+        if (this.enterpriseType != other.enterpriseType) {
+            return false;
+        }
+        if (this.getName().equals(other.getName()) == false)
+            return false;
+        return true;
+    }
+    
     
     @Override
     public String toString() {
