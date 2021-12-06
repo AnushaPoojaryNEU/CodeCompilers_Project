@@ -14,9 +14,9 @@ import javax.swing.JPanel;
  *
  * @author dwith
  */
-public class AdminRole extends Role{
+public class Counselor extends Role {
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem system, Enterprise enterprise, Individual individual) {
-        return new AdminWorkAreaJPanel(userProcessContainer, account, enterprise, system);
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business, Enterprise enterprise,Individual individual) {
+        return new CounselorWorkAreaJPanel(userProcessContainer, account, enterprise, business);
     }
 }

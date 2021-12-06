@@ -21,11 +21,11 @@ public abstract class Role {
         Admin("Admin"),
         Doctor("Doctor"),
         Nurse("Nurse"),
-        Caregiver("Caregiver"),
+        Counselor("Counselor"),
         Reviewer("Reviewer"),
         Individual("Individual"),
         SystemAdmin("SystemAdmin"),
-        Trainer("Trainer");
+        EmploymentTraining("EmploymentTraining");
         
         
         private final String value;
