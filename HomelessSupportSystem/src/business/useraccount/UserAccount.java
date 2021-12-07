@@ -5,6 +5,8 @@
 package business.useraccount;
 
 import business.role.Role;
+import business.role.Role.RoleType;
+import business.workqueue.WorkQueue;
 
 /**
  *
@@ -15,6 +17,7 @@ public class UserAccount {
    private String password;
    private Role role;
    private RoleType roleType;
+   private WorkQueue workQueue;
 
     public String getUsername() {
         return username;
@@ -47,6 +50,14 @@ public class UserAccount {
     public void setRoleType(RoleType roleType) {
         this.roleType = roleType;
     }
-   
+
+    public WorkQueue getWorkQueue() {
+        return workQueue;
+    }
+
+    public UserAccount() {
+        workQueue = new WorkQueue();
+   }
+  
    
 }
