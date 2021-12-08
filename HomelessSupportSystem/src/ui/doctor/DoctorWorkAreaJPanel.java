@@ -267,7 +267,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JFrame {
     private javax.swing.JTable manageApplicantsJTable;
     // End of variables declaration//GEN-END:variables
 
-    private void populateTable() {
+    public void populateTable() {
         DefaultTableModel dtm = (DefaultTableModel) manageApplicantsJTable.getModel();
         dtm.setRowCount(0);
         if (this.userAccount.getWorkQueue().getWorkRequestList().size() > 0) {
