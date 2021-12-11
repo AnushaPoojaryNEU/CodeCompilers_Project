@@ -9,41 +9,62 @@ import java.util.List;
 
 /**
  *
- * @author anu61
+ * @author anu61<T>
  */
-public class IndividualDirectory {
-    private List<Individual> individualList;
-      
+public class IndividualDirectory <T extends Individual>  {
+     private List<T> individualList;
+    
     public IndividualDirectory() {
-        
-        individualList = new ArrayList<Individual>();
+        individualList = new ArrayList<>();
     }
-
-       
-    public Individual addIndividual(Individual i){
-        if(individualList.contains(i) == false){
-            Individual individual = new Individual();
-            return individual;
+    
+    public List<T> getList() {
+        return individualList;
+    }
+    
+    public boolean add(T element) {
+        if (element == null)
+            return false;
+        return individualList.add(element);
+    }
+    
+    public boolean update(int idx, T element) {
+        if (element == null)
+            return false;
+        if ((idx < 0) || (idx > individualList.size()) )
+            return false;
+        individualList.set(idx, element);
+        return true;
+    }
+    
+    public boolean update(T element) {
+        int idx = individualList.indexOf(element);
+        if (idx < 0)
+            return false;
+        individualList.set(idx, element);
+        return true;
+    }
+    
+    public boolean remove(T element) {
+        return individualList.remove(element);
+    }
+    
+    public boolean remove(int idx) {
+        individualList.remove(idx);
+        return true;
+    }
+    
+    public T findUsingUsername(String username) {
+        for (T e: individualList) {
+            if(e.getUsername().equals(username))
+                return e;
         }
         return null;
     }
     
-    
-    public boolean deleteIndividual(Individual i){
-         if(individualList.contains(i) == true){
-            individualList.remove(i);
-            return true;
-        }
-        return false;
+    public boolean isUsernameUnique(String username) {
+        if(findUsingUsername(username) == null)
+            return false;
+        return true;
     }
-    
-    public List<Individual> getIndividualList() {
-        return individualList;
-    }
-
-    public void setIndividualList(List<Individual> individualList) {
-        this.individualList = individualList;
-    }
-    
-   
 }

@@ -4,127 +4,142 @@
  */
 package business.individuals;
 
-import java.util.ArrayList;
+import business.useraccount.UserAccount;
+import business.util.Util;
 import java.util.List;
+import java.util.Objects;
+import java.util.UUID;
 
 /**
  *
  * @author dwith
  */
 public class Individual {
-    
-    private int regId;
-    private String firstName;
-    private String lastName;
-    private String userName;
+    private String id;
+    private String username;
+    private String name;
     private String address;
     private String city;
-    private int zipCode;
-    private String birthDate;
-    private String serviceType;
-    private HomelessSupportSystem recordInfo;   
-    private List<IndividualHistory> history;
+    private String zipCode;
+    private int age;
     
-     public Individual() {
-        regId = (int) (System.currentTimeMillis() & 0xfffffff);
+    public Individual() {
+        id = UUID.randomUUID().toString();
     }
 
-    public int getRegId() {
-        return regId;
+    public String getId() {
+        return id;
     }
 
-    public void setRegId(int regId) {
-        this.regId = regId;
+    public String getUsername() {
+        return username;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public boolean setUsername(String username) {
+        if (Util.strValidate(username, null)) {
+            this.username = username;
+            return true;
+        }
+        return false;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public String getName() {
+        return name;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public boolean setName(String name) {
+        if (Util.strValidate(name, null)) {
+            this.name = name;
+            return true;
+        }
+        return false;
     }
 
     public String getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public boolean setAddress(String address) {
+        if (Util.strValidate(address, null)) {
+            this.address = address;
+            return true;
+        }
+        return false;
     }
 
     public String getCity() {
         return city;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public boolean setCity(String city) {
+        if (Util.strValidate(city, null)) {
+            this.city = city;
+            return true;
+        }
+        return false;
     }
 
-    public int getZipCode() {
+    public String getZipCode() {
         return zipCode;
     }
 
-    public void setZipCode(int zipCode) {
-        this.zipCode = zipCode;
-    }
-
-    public String getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public String getServiceType() {
-        return serviceType;
-    }
-
-    public void setServiceType(String serviceType) {
-        this.serviceType = serviceType;
-    }
-
-    public HomelessSupportSystem getRecordInfo() {
-        return recordInfo;
-    }
-
-    public void setRecordInfo(HomelessSupportSystem recordInfo) {
-        this.recordInfo = recordInfo;
-    }
-
-    public List<IndividualHistory> getHistory() {
-        if(history==null){
-            history = new ArrayList();
+    public boolean setZipCode(String zipCode) {
+        if (Util.strValidate(zipCode, "[0-9]+")) {
+            this.zipCode = zipCode;
+            return true;
         }
-        return history;
+        return false;
     }
 
-    public void setHistory(List<IndividualHistory> history) {
-        this.history = history;
+    public int getAge() {
+        return age;
     }
-     
-     
-     
-          
+    
+    public boolean setAge(int age) {
+        if ((age > 0) && (age < 200)) {
+            this.age = age;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean setAge(String age) {
+        if (Util.strValidate(age, "[0-9]+")) {
+            try {               
+                return this.setAge(Integer.valueOf(age));
+            } catch (Exception e) {
+                return false;
+            }
+        }
+        return false;
+    }
+
     @Override
-    public String toString(){
-        return this.getUserName();
+    public int hashCode() {
+        int hash = 7;
+        return hash;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Individual other = (Individual) obj;
+        if (!Objects.equals(this.id, other.id)) {
+            return false;
+        }
+        if (!Objects.equals(this.username, other.username)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
 }
