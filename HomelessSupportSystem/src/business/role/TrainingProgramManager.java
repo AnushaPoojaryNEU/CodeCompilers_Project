@@ -16,5 +16,9 @@ import ui.training.ProgramManagerJPanel;
  */
 public class TrainingProgramManager extends Role{
 
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+        return new ProgramManagerJPanel(userProcessContainer, business, account);
+    }
     
 }
