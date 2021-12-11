@@ -18,5 +18,9 @@ import ui.sheltermonitoring.FoodOrderJPanel;
  */
 public class HousingManager extends Role{
 
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+        return new FoodOrderJPanel(userProcessContainer, business, account);
+    }
     
 }
