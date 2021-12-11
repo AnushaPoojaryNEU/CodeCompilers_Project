@@ -40,7 +40,23 @@ public class UserAccountDirectory {
         return userAccount;
     }
     
-
+    public boolean addUserAccount(UserAccount ua) {
+        if (ua == null)
+            return false;
+        return userAccountList.add(ua);
+    }
+    
+    public boolean updateUserAccount(String curUsername, UserAccount ua) {
+        UserAccount curUa = getUserAccountWithUsername(curUsername);
+        if (curUa == null)
+            return false;
+        int idx = userAccountList.indexOf(curUa);
+        if (idx < 0) 
+            return false;
+        userAccountList.set(idx, ua);
+        return true;
+    }
+    
    
     
 }
