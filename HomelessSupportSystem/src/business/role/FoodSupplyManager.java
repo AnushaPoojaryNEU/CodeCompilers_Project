@@ -16,5 +16,10 @@ import ui.food.FoodSupplyManagerJPanel;
  */
 public class FoodSupplyManager extends Role{
 
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, 
+            UserAccount account, EcoSystem business) {
+        return new FoodSupplyManagerJPanel(userProcessContainer, account, business);
+    }
     
 }
