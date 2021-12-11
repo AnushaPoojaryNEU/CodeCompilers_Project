@@ -5,6 +5,7 @@
 package business.useraccount;
 
 import business.role.Role;
+import business.role.Role.RoleType;
 import java.util.ArrayList;
 import java.util.List;
 
