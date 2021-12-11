@@ -18,5 +18,9 @@ import ui.hospital.EncounterJPanel;
  */
 public class Nurse extends Role{
 
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+        return new EncounterJPanel(userProcessContainer, account, business);
+    }
     
 }
