@@ -9,14 +9,12 @@ import business.enterprise.Enterprise;
 import business.individuals.Individual;
 import business.useraccount.UserAccount;
 import javax.swing.JPanel;
+import ui.sysadmin.SysAdminJPanel;
 
 /**
  *
  * @author anu61
  */
 public class SystemAdminRole extends Role{
-    @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem system, Enterprise enterprise,Individual individual) {
-        return new SystemAdminWorkAreaJPanel(userProcessContainer,system);//To change body of generated methods, choose Tools | Templates.
-    }
+    
 }
