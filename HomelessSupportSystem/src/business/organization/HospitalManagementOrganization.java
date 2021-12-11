@@ -18,6 +18,11 @@ public class HospitalManagementOrganization extends Organization {
         super(name);
     }
 
-  
+    @Override
+    public List<RoleType> getSupportedRoles() {
+        ArrayList<RoleType> rList = new ArrayList<>();
+        rList.add(RoleType.RECEPTIONIST);
+        return rList;
+    }
     
 }
