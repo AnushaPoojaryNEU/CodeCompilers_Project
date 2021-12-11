@@ -16,6 +16,9 @@ import ui.sheltermonitoring.HomelessIndividualJPanel;
  */
 public class HomelessIndividual extends Role {
 
-    
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem system) {
+        return new HomelessIndividualJPanel(userProcessContainer, account, system);
+    }
     
 }
