@@ -18,5 +18,9 @@ import ui.sheltermonitoring.MaintenanceCrewJPanel;
  */
 public class MaintenanceCrewMember extends Role{
 
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+        return new MaintenanceCrewJPanel(userProcessContainer, account, business);
+    }
     
 }
