@@ -5,7 +5,6 @@
 package business.useraccount;
 
 import business.role.Role;
-import business.role.Role.RoleType;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,19 +40,7 @@ public class UserAccountDirectory {
         return userAccount;
     }
     
-    public UserAccount deleUserAccount(UserAccount userAccount)
-    {
-       userAccountList.remove(userAccount);
-       return userAccount;
-    }
-    
-    public boolean checkIfUsernameIsUnique(String username){
-        for (UserAccount ua : userAccountList){
-            if (ua.getUsername().equalsIgnoreCase(username))
-                return false;
-        }
-        return true;
-    }
+
    
     
 }
