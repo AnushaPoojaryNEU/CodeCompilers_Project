@@ -31,4 +31,24 @@ public class OrganizationDirectory {
         }
         return false;
     }
+    
+    public boolean addEmployee(Employee emp) {
+        for (Organization org : organizationList) {
+            if (org.getSupportedRoles().contains(emp.getRole())) {
+                return org.getEdir().add(emp);
+            }
+        }
+        return false;
+    }
+    
+    public boolean removeEmployeeUsingUsername(String username) {
+        for (Organization org : organizationList) {
+            Employee emp = org.getEdir().findUsingUsername(username);
+            if (emp != null) {
+                org.getEdir().remove(emp);
+                return true;
+            }
+        }
+        return false;
+    }
 }
