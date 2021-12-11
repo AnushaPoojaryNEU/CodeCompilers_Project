@@ -27,6 +27,12 @@ public class HousingOrganization extends Organization {
         homelessDirectory = new IndividualDirectory<>();
     }
 
-    
+    @Override
+    public List<RoleType> getSupportedRoles() {
+        ArrayList<RoleType> rList = new ArrayList<>();
+        rList.add(RoleType.HOUSING_MANAGER);
+        rList.add(RoleType.HOMELESS_INDIVIDUAL);
+        return rList;
+    }
     
 }
