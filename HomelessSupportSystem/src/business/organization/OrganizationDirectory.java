@@ -20,5 +20,15 @@ public class OrganizationDirectory {
         organizationList = new ArrayList<>();
     }
 
-    
+    public List<Organization> getOrganizationList() {
+        return organizationList;
+    }
+
+    public boolean setOrganizationList(List<Organization> organizationList) {
+        if (organizationList != null) {
+            this.organizationList = organizationList;
+            return true;
+        }
+        return false;
+    }
 }
