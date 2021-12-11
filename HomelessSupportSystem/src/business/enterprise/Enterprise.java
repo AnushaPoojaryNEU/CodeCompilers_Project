@@ -5,28 +5,79 @@
  */
 package business.enterprise;
 
-import business.employee.Employee;
+import business.individuals.Employee;
 import business.organization.Organization;
 import business.organization.OrganizationDirectory;
-import business.useraccount.UserAccount;
-import java.util.HashMap;
-import java.util.Map;
+import business.organization.RoleType;
+import business.useraccount.UserAccountDirectory;
+import business.util.Util;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 /**
  *
  * @author geeth
  */
-public abstract class Enterprise extends Organization {
+public abstract class Enterprise {
 
-    public EnterpriseType enterpriseType;
-    private OrganizationDirectory organizationDirectory;
-    private Map<Employee, UserAccount> employeeToUserAcc;
+    private String name, address;
+    protected OrganizationDirectory organizationDirectory;
+    protected UserAccountDirectory userAccountDirectory;
 
-    public Enterprise(String name, EnterpriseType type) {
-        super(name);
-        this.enterpriseType = type;
-        this.organizationDirectory = new OrganizationDirectory();
-        employeeToUserAcc = new HashMap<>();
+    public Enterprise(String name, String address) {
+        this.userAccountDirectory = new UserAccountDirectory();
+        this.name = name;
+        this.address = address;
+        organizationDirectory = new OrganizationDirectory();
+    }
+    
+    public List<Employee> getAllEmployees() {
+        List<Employee> li = new ArrayList<>();
+        for (Organization org: organizationDirectory.getOrganizationList()) {
+            li.addAll(org.getEdir().getList());
+        }
+        return li;
+    }
+    
+    public List<RoleType> getSupportedRoles() {
+        List<RoleType> li = new ArrayList<>();
+        for (Organization org: organizationDirectory.getOrganizationList()) {
+            li.addAll(org.getSupportedRoles());
+        }
+        return li;
+    }
+    
+    public UserAccountDirectory getUserAccountDirectory() {
+        return userAccountDirectory;
+    }
+
+    public OrganizationDirectory getOrganizationDirectory() {
+        return organizationDirectory;
+    }
+    
+    public String getName() {
+        return name;
+    }
+
+    public boolean setName(String name) {
+        if (Util.strValidate(name, null)) {
+            this.name = name;
+            return true;
+        }
+        return false;
+    }
+    
+    public String getAddress() {
+        return address;
+    }
+
+    public boolean setAddress(String address) {
+        if (Util.strValidate(address, null)) {
+            this.address = address;
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -41,45 +92,13 @@ public abstract class Enterprise extends Organization {
             return false;
         }
         final Enterprise other = (Enterprise) obj;
-        if (this.enterpriseType != other.enterpriseType) {
+        if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (this.getName().equals(other.getName()) == false)
+        if (!Objects.equals(this.address, other.address)) {
             return false;
+        }
         return true;
-    }
-
-
-    @Override
-    public String toString() {
-        return getName();
-    }
-
-    public EnterpriseType getEnterpriseType() {
-        return enterpriseType;
-    }
-
-    public void setEnterpriseType(EnterpriseType enterpriseType) {
-        if (enterpriseType != null)
-            this.enterpriseType = enterpriseType;
-    }
-
-    public OrganizationDirectory getOrganizationDirectory() {
-        return organizationDirectory;
-    }
-
-    public void setOrganizationDirectory(OrganizationDirectory organizationDirectory) {
-        if (organizationDirectory != null)
-            this.organizationDirectory = organizationDirectory;
-    }
-
-    public Map<Employee, UserAccount> getEmployeeToUserAcc() {
-        return employeeToUserAcc;
-    }
-
-    public void setEmployeeToUserAcc(Map<Employee, UserAccount> employeeToUserAcc) {
-        if (employeeToUserAcc != null)
-            this.employeeToUserAcc = employeeToUserAcc;
     }
 
 }

@@ -4,6 +4,7 @@
  */
 package business.individuals;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,8 +22,7 @@ public class Individual {
     private int zipCode;
     private String birthDate;
     private String serviceType;
-    private HomelessSupportSystem recordInfo;
-   
+    private HomelessSupportSystem recordInfo;   
     private List<IndividualHistory> history;
     
      public Individual() {
@@ -110,6 +110,9 @@ public class Individual {
     }
 
     public List<IndividualHistory> getHistory() {
+        if(history==null){
+            history = new ArrayList();
+        }
         return history;
     }
 

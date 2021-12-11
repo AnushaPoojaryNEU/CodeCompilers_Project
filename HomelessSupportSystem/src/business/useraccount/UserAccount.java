@@ -5,7 +5,8 @@
 package business.useraccount;
 
 import business.role.Role;
-import java.util.Objects;
+import business.role.Role.RoleType;
+import business.workqueue.WorkQueue;
 
 /**
  *
@@ -15,6 +16,8 @@ public class UserAccount {
    private String username;
    private String password;
    private Role role;
+   private RoleType roleType;
+   private WorkQueue workQueue;
 
     public String getUsername() {
         return username;
@@ -57,5 +60,18 @@ public class UserAccount {
         }
         return true;
     }
-   
+
+    public void setRoleType(RoleType roleType) {
+        this.roleType = roleType;
+    }
+
+    public WorkQueue getWorkQueue() {
+        return workQueue;
+    }
+
+    public UserAccount() {
+        workQueue = new WorkQueue();
+   }
+  
+
 }
