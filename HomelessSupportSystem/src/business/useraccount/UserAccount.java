@@ -43,8 +43,22 @@ public class UserAccount {
         this.role = role;
     }
 
-    public RoleType getRoleType() {
-        return roleType;
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final UserAccount other = (UserAccount) obj;
+        if (!Objects.equals(this.username, other.username)) {
+            return false;
+        }
+        return true;
     }
 
     public void setRoleType(RoleType roleType) {
@@ -59,5 +73,5 @@ public class UserAccount {
         workQueue = new WorkQueue();
    }
   
-   
+
 }

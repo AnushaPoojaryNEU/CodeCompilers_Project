@@ -9,6 +9,8 @@ import business.enterprise.Enterprise;
 import business.individuals.Individual;
 import business.useraccount.UserAccount;
 import javax.swing.JPanel;
+import ui.enterprise.EnterpriseAdminJPanel;
+import ui.enterprise.ManageEmployeesJPanel;
 
 /**
  *
@@ -16,7 +18,7 @@ import javax.swing.JPanel;
  */
 public class AdminRole extends Role{
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem system, Enterprise enterprise, Individual individual) {
-        return new AdminWorkAreaJPanel(userProcessContainer, account, enterprise, system);
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem system) {
+        return new EnterpriseAdminJPanel(userProcessContainer, account, system);
     }
 }

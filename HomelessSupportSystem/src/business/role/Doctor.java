@@ -5,19 +5,18 @@
 package business.role;
 
 import business.EcoSystem;
-import business.enterprise.Enterprise;
-import business.individuals.Individual;
 import business.useraccount.UserAccount;
 import javax.swing.JPanel;
-import ui.sysadmin.SysAdminJPanel;
+import ui.hospital.DoctorJPanel;
 
 /**
  *
- * @author anu61
+ * @author dwith
  */
-public class SystemAdminRole extends Role{
+public class Doctor extends Role{
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem system) {
-        return new SysAdminJPanel(userProcessContainer, system, account);
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+        return new DoctorJPanel(userProcessContainer, account, business);
     }
+    
 }

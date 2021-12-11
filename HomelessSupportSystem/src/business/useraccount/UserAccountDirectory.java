@@ -32,12 +32,11 @@ public class UserAccountDirectory {
         return null;
     }
     
-    public UserAccount createUserAccount(String username, String password, Role role, RoleType roleType){
+    public UserAccount createUserAccount(String username, String password, Role role){
         UserAccount userAccount = new UserAccount();
         userAccount.setUsername(username);
         userAccount.setPassword(password);
         userAccount.setRole(role);
-        userAccount.setRoleType(roleType);
         userAccountList.add(userAccount);
         return userAccount;
     }
