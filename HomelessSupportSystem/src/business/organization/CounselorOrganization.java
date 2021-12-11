@@ -14,8 +14,7 @@ import java.util.Map;
  * @author anu61
  */
 public class CounselorOrganization extends Organization {
-  
-    Map<Schedule, UserAccount> counselorSchedule;
+
 
     public CounselorOrganization() {
         super(Organization.Type.Counselor.getValue());
@@ -27,16 +26,6 @@ public class CounselorOrganization extends Organization {
         roles.add(new CounselorRole());
         return roles;
     }
-
-    public Map<Schedule, UserAccount> getCounselorSchedule() {
-        return counselorSchedule;
-    }
-
-    public void setCounselorSchedule(Map<Schedule, UserAccount> counselorSchedule) {
-        this.counselorSchedule = counselorSchedule;
-    }
-    
-    
 
 
 }
