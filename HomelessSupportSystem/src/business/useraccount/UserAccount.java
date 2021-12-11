@@ -99,6 +99,40 @@ public class UserAccount {
     }
 
 
-   
+    private Role parseRoleFromString(String role) {
+        try {
+            RoleType rt = RoleType.valueOf(role); 
+            if (rt.equals(RoleType.CHEF)) 
+                return new Chef();
+            else if (rt.equals(RoleType.DELIVERY_MAN))
+                return new DeliveryMan();
+            else if (rt.equals(RoleType.DOCTOR))
+                return new Doctor();
+            else if (rt.equals(RoleType.ENTERPRISE_ADMIN))
+                return new AdminRole();
+            else if (rt.equals(RoleType.FOOD_SUPPLY_MANAGER))
+                return new FoodSupplyManager();
+            else if (rt.equals(RoleType.HOMELESS_INDIVIDUAL))
+                return new HomelessIndividual();
+            else if (rt.equals(RoleType.HOUSING_MANAGER))
+                return new HousingManager();
+            else if (rt.equals(RoleType.INSTRUCTOR))
+                return new Instructor();
+            else if (rt.equals(RoleType.MAINTENANCE_CREW_MEMBER))
+                return new MaintenanceCrewMember();
+            else if (rt.equals(RoleType.NURSE))
+                return new Nurse();
+            else if (rt.equals(RoleType.PROGRAM_MANAGER))
+                return new TrainingProgramManager();
+            else if (rt.equals(RoleType.RECEPTIONIST))
+                return new Receptionist();
+            else if (rt.equals(RoleType.SYS_ADMIN)) 
+                return new SystemAdminRole();
+            else
+                return null;
+        } catch (Exception ex) {
+            return null;
+        }
+    }
     
 }
