@@ -22,6 +22,8 @@ public abstract class Organization {
         this.name = name;
     }
 
-   
+    public EmployeeDirectory getEdir() {
+        return edir;
+    }
     
 }
