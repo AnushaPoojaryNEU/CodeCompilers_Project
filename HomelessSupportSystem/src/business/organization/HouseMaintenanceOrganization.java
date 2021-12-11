@@ -18,5 +18,11 @@ public class HouseMaintenanceOrganization extends Organization{
         super(name);
     }
 
-   
+    @Override
+    public List<RoleType> getSupportedRoles() {
+        ArrayList<RoleType> rList = new ArrayList<>();
+        rList.add(RoleType.MAINTENANCE_CREW_MEMBER);
+        return rList;
+    }
+    
 }
