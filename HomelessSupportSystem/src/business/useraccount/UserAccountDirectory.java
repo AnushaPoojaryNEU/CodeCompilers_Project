@@ -72,7 +72,19 @@ public class UserAccountDirectory {
         return deleteUserAccount(ua);
     }
     
+    public UserAccount getUserAccountWithUsername(String username) {
+        for (UserAccount ua : userAccountList){
+            if (ua.getUsername().equalsIgnoreCase(username))
+                return ua;
+        }
+        return null;
+    }
     
+    public boolean isUsernameUnique(String username){
+        if (getUserAccountWithUsername(username) == null)
+            return true;
+        return false;
+    }
    
     
 }
