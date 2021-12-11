@@ -26,4 +26,16 @@ public abstract class Organization {
         return edir;
     }
     
+        public String getName() {
+        return name;
+    }
+
+    public boolean setName(String name) {
+        if(Util.strValidate(name, null)) {
+            this.name = name;
+            return true;
+        }
+        return false;
+    }
+    
 }
