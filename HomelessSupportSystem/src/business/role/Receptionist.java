@@ -18,4 +18,9 @@ import ui.hospital.ReceptionistJPanel;
  */
 public class Receptionist extends Role{
 
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+        return new ReceptionistJPanel(userProcessContainer, account, business);
+    }
+    
 }
