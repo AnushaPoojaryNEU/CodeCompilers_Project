@@ -16,5 +16,8 @@ import ui.sysadmin.SysAdminJPanel;
  * @author anu61
  */
 public class SystemAdminRole extends Role{
-    
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem system) {
+        return new SysAdminJPanel(userProcessContainer, system, account);
+    }
 }
