@@ -51,4 +51,18 @@ public class OrganizationDirectory {
         }
         return false;
     }
+    
+    public boolean updateEmployee(String username, Employee employee) {
+        for (Organization org : organizationList) {
+            Employee emp = org.getEdir().findUsingUsername(username);
+            if (emp != null) {
+                int idx = org.getEdir().getList().indexOf(emp);
+                if (idx < 0)
+                    return false;
+                org.getEdir().getList().set(idx, employee);
+            }
+        }
+        return false;
+    }
+    
 }
