@@ -18,5 +18,10 @@ import ui.training.InstructorJPanel;
  */
 public class Instructor extends Role{
 
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, 
+            UserAccount account, EcoSystem business) {
+        return new InstructorJPanel(userProcessContainer, business, account);
+    }
     
 }
