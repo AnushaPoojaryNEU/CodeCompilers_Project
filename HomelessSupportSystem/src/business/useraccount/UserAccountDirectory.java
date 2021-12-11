@@ -5,7 +5,6 @@
 package business.useraccount;
 
 import business.role.Role;
-import business.role.Role.RoleType;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,18 +40,50 @@ public class UserAccountDirectory {
         return userAccount;
     }
     
-    public UserAccount deleUserAccount(UserAccount userAccount)
-    {
-       userAccountList.remove(userAccount);
-       return userAccount;
+    public boolean addUserAccount(UserAccount ua) {
+        if (ua == null)
+            return false;
+        return userAccountList.add(ua);
     }
     
-    public boolean checkIfUsernameIsUnique(String username){
+    public boolean updateUserAccount(String curUsername, UserAccount ua) {
+        UserAccount curUa = getUserAccountWithUsername(curUsername);
+        if (curUa == null)
+            return false;
+        int idx = userAccountList.indexOf(curUa);
+        if (idx < 0) 
+            return false;
+        userAccountList.set(idx, ua);
+        return true;
+    }
+    
+    public boolean deleteUserAccount(UserAccount userAccount)
+    {
+       if (userAccount == null)
+           return false;
+       userAccountList.remove(userAccount);
+       return true;
+    }
+    
+    public boolean deleteUserAccount(String username) {
+        UserAccount ua = getUserAccountWithUsername(username);
+        if (ua == null)
+            return false;
+        return deleteUserAccount(ua);
+    }
+    
+    public UserAccount getUserAccountWithUsername(String username) {
         for (UserAccount ua : userAccountList){
             if (ua.getUsername().equalsIgnoreCase(username))
-                return false;
+                return ua;
         }
-        return true;
+        return null;
+    }
+    
+    public boolean isUsernameUnique(String username){
+        if (getUserAccountWithUsername(username) == null)
+            return true;
+        return false;
     }
    
     
