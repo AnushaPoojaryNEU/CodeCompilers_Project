@@ -17,5 +17,11 @@ public class FoodSupplyOrganization extends Organization {
         super(name);
     }
 
-    
+    @Override
+    public List<RoleType> getSupportedRoles() {
+        ArrayList<RoleType> rList = new ArrayList<>();
+        rList.add(RoleType.FOOD_SUPPLY_MANAGER);
+        rList.add(RoleType.DELIVERY_MAN);
+        return rList;
+    }
 }
