@@ -4,74 +4,82 @@
  */
 package business.useraccount;
 
-import business.role.Role;
-import business.role.Role.RoleType;
-import business.workqueue.WorkQueue;
+import business.individuals.Individual;
+import business.organization.RoleType;
+import business.role.*;
+import business.util.Util;
+import business.workqueue.WorkRequest;
+import java.util.ArrayList;
+import java.util.Objects;
+import java.util.UUID;
 
 /**
  *
  * @author anu61
  */
 public class UserAccount {
+  
    private String username;
    private String password;
    private Role role;
-   private RoleType roleType;
-   private WorkQueue workQueue;
+   private Individual individual;
+ 
+    public Individual getIndividual() {
+        return individual;
+    }
+
+    public boolean setIndividual(Individual individual) {
+        if (individual != null) {
+            this.individual = individual;
+            return true;
+        }
+        return false;
+    }
 
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public boolean setUsername(String username) {
+        if (Util.strValidate(username, null)) {
+            this.username = username;
+            return true;
+        }
+        return false;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public boolean setPassword(String password) {
+        if (Util.strValidate(password, null)) {
+            this.password = password;
+            return true;
+        }
+        return false;
     }
 
     public Role getRole() {
         return role;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
+    public boolean setRole(Role role) {
+        if (role != null) {
+            this.role = role;
             return true;
         }
-        if (obj == null) {
+        return false;
+    }
+    
+    public boolean setRole(String role) {
+        Role r = parseRoleFromString(role);
+        if (r == null)
             return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final UserAccount other = (UserAccount) obj;
-        if (!Objects.equals(this.username, other.username)) {
-            return false;
-        }
+        this.role = r;
         return true;
     }
 
-    public void setRoleType(RoleType roleType) {
-        this.roleType = roleType;
-    }
 
-    public WorkQueue getWorkQueue() {
-        return workQueue;
-    }
-
-    public UserAccount() {
-        workQueue = new WorkQueue();
-   }
-  
-
+    
 }
