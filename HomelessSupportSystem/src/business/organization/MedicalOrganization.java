@@ -18,6 +18,12 @@ public class MedicalOrganization extends Organization{
         super(name);
     }
 
-   
+    @Override
+    public List<RoleType> getSupportedRoles() {
+        ArrayList<RoleType> rList = new ArrayList<>();
+        rList.add(RoleType.DOCTOR);
+        rList.add(RoleType.NURSE);
+        return rList;
+    }
     
 }
