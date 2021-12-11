@@ -38,4 +38,5 @@ public abstract class Organization {
         return false;
     }
     
+    public abstract List<RoleType> getSupportedRoles();
 }
