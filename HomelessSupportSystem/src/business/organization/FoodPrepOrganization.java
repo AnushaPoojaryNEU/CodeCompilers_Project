@@ -17,5 +17,10 @@ public class FoodPrepOrganization extends Organization {
         super(name);
     }
 
-
+    @Override
+    public List<RoleType> getSupportedRoles() {
+        ArrayList<RoleType> rList = new ArrayList<>();
+        rList.add(RoleType.CHEF);
+        return rList;
+    }
 }
