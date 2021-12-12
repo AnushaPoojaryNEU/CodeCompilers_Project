@@ -138,7 +138,9 @@ public class DoctorJPanel extends javax.swing.JPanel {
         preText.setRows(5);
         jScrollPane4.setViewportView(preText);
 
+        submitButton.setBackground(new java.awt.Color(38, 55, 85));
         submitButton.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        submitButton.setForeground(new java.awt.Color(38, 55, 85));
         submitButton.setText("Submit");
         submitButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         submitButton.addActionListener(new java.awt.event.ActionListener() {
