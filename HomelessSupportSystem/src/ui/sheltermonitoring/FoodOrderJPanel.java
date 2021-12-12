@@ -35,6 +35,8 @@ public class FoodOrderJPanel extends javax.swing.JPanel {
         this.userAccount = account;
         //valueLabel.setText(enterprise.getName());
         populateRequestTable();
+        imageTwo.setIcon(new ImageIcon(new ImageIcon("images/orderfood.jpg").getImage(
+                ).getScaledInstance(500, 400, Image.SCALE_DEFAULT)));
     }
     
     public void populateRequestTable(){
@@ -66,6 +68,7 @@ public class FoodOrderJPanel extends javax.swing.JPanel {
         enterpriseLabel = new javax.swing.JLabel();
         newOrderButton = new javax.swing.JButton();
         imageEight = new javax.swing.JLabel();
+        imageTwo = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 204));
         addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -106,7 +109,7 @@ public class FoodOrderJPanel extends javax.swing.JPanel {
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Order Food for Community");
 
-        newOrderButton.setBackground(new java.awt.Color(0, 0, 51));
+        newOrderButton.setBackground(new java.awt.Color(38, 55, 85));
         newOrderButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         newOrderButton.setForeground(new java.awt.Color(255, 255, 204));
         newOrderButton.setText("Place New Order");
@@ -143,6 +146,10 @@ public class FoodOrderJPanel extends javax.swing.JPanel {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 672, Short.MAX_VALUE)
                         .addContainerGap())))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(302, 302, 302)
+                .addComponent(imageTwo)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,8 +161,10 @@ public class FoodOrderJPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(newOrderButton)
                 .addGap(18, 18, 18)
+                .addComponent(imageTwo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(imageEight)
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addContainerGap(178, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     
@@ -174,6 +183,7 @@ public class FoodOrderJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JLabel imageEight;
+    private javax.swing.JLabel imageTwo;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton newOrderButton;
     private javax.swing.JTable workRequestJTable;

@@ -46,6 +46,10 @@ public class HomelessIndividualJPanel extends javax.swing.JPanel {
         maintenanceButton = new javax.swing.JButton();
         titleLabel = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 204));
+
+        enrollButton.setBackground(new java.awt.Color(38, 55, 85));
+        enrollButton.setForeground(new java.awt.Color(255, 255, 204));
         enrollButton.setText("Enroll in Training Course");
         enrollButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,6 +57,8 @@ public class HomelessIndividualJPanel extends javax.swing.JPanel {
             }
         });
 
+        docButton.setBackground(new java.awt.Color(38, 55, 85));
+        docButton.setForeground(new java.awt.Color(255, 255, 204));
         docButton.setText("Request Doctor Appointment");
         docButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,6 +66,8 @@ public class HomelessIndividualJPanel extends javax.swing.JPanel {
             }
         });
 
+        maintenanceButton.setBackground(new java.awt.Color(38, 55, 85));
+        maintenanceButton.setForeground(new java.awt.Color(255, 255, 204));
         maintenanceButton.setText("Request House Maintenance");
         maintenanceButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -101,6 +101,8 @@ public class CourseEnrollmentJPanel extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         backButton = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 204));
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel1.setText("Currently enrolled courses -");
 
@@ -130,6 +132,8 @@ public class CourseEnrollmentJPanel extends javax.swing.JPanel {
         prereqText.setRows(5);
         jScrollPane2.setViewportView(prereqText);
 
+        enrollButton.setBackground(new java.awt.Color(38, 55, 85));
+        enrollButton.setForeground(new java.awt.Color(255, 255, 204));
         enrollButton.setText("Submit enrollment request");
         enrollButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +141,8 @@ public class CourseEnrollmentJPanel extends javax.swing.JPanel {
             }
         });
 
+        table.setAutoCreateRowSorter(true);
+        table.setBackground(new java.awt.Color(255, 255, 204));
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -164,6 +170,8 @@ public class CourseEnrollmentJPanel extends javax.swing.JPanel {
 
         jLabel6.setText("Enroll in a new course -");
 
+        backButton.setBackground(new java.awt.Color(38, 55, 85));
+        backButton.setForeground(new java.awt.Color(255, 255, 204));
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

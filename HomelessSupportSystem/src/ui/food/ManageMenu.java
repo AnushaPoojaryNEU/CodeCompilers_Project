@@ -74,7 +74,7 @@ public class ManageMenu extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 204));
 
-        backButton.setBackground(new java.awt.Color(0, 0, 51));
+        backButton.setBackground(new java.awt.Color(38, 55, 85));
         backButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         backButton.setForeground(new java.awt.Color(255, 255, 204));
         backButton.setText("Back");
@@ -120,7 +120,7 @@ public class ManageMenu extends javax.swing.JPanel {
 
         jLabel3.setText("Price : ");
 
-        addDishButton.setBackground(new java.awt.Color(0, 0, 51));
+        addDishButton.setBackground(new java.awt.Color(38, 55, 85));
         addDishButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         addDishButton.setForeground(new java.awt.Color(255, 255, 204));
         addDishButton.setText("Add Dish");
@@ -130,7 +130,7 @@ public class ManageMenu extends javax.swing.JPanel {
             }
         });
 
-        updateDishButton.setBackground(new java.awt.Color(0, 0, 51));
+        updateDishButton.setBackground(new java.awt.Color(38, 55, 85));
         updateDishButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         updateDishButton.setForeground(new java.awt.Color(255, 255, 204));
         updateDishButton.setText("Update Dish");
@@ -140,7 +140,7 @@ public class ManageMenu extends javax.swing.JPanel {
             }
         });
 
-        removeDishButton.setBackground(new java.awt.Color(0, 0, 51));
+        removeDishButton.setBackground(new java.awt.Color(38, 55, 85));
         removeDishButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         removeDishButton.setForeground(new java.awt.Color(255, 255, 204));
         removeDishButton.setText("Remove Dish");

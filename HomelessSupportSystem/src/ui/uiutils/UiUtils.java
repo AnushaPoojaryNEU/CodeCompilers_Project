@@ -6,6 +6,7 @@ package ui.uiutils;
 
 import java.awt.CardLayout;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 /**
  *
@@ -15,6 +16,7 @@ public class UiUtils {
     public static void nextScreen(JPanel container, JPanel nextPanel, 
             String nextPanelName) {
         CardLayout layout = (CardLayout) container.getLayout();
+        //container.add("workArea", new JScrollPane(nextPanel));
         container.add("workArea", nextPanel);
         layout.next(container);
     }

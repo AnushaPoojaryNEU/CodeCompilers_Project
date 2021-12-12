@@ -79,8 +79,9 @@ public class PlaceOrderJPanel extends javax.swing.JPanel {
         commentsText = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 255, 204));
+        setForeground(new java.awt.Color(38, 55, 85));
 
-        backButton.setBackground(new java.awt.Color(0, 0, 51));
+        backButton.setBackground(new java.awt.Color(38, 55, 85));
         backButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         backButton.setForeground(new java.awt.Color(255, 255, 204));
         backButton.setText("Back");
@@ -139,7 +140,7 @@ public class PlaceOrderJPanel extends javax.swing.JPanel {
             }
         });
 
-        addButton.setBackground(new java.awt.Color(0, 0, 51));
+        addButton.setBackground(new java.awt.Color(38, 55, 85));
         addButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         addButton.setForeground(new java.awt.Color(255, 255, 204));
         addButton.setText("Add to Cart");
@@ -149,7 +150,7 @@ public class PlaceOrderJPanel extends javax.swing.JPanel {
             }
         });
 
-        updateButton.setBackground(new java.awt.Color(0, 0, 51));
+        updateButton.setBackground(new java.awt.Color(38, 55, 85));
         updateButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         updateButton.setForeground(new java.awt.Color(255, 255, 204));
         updateButton.setText("Update Cart Item");
@@ -159,7 +160,7 @@ public class PlaceOrderJPanel extends javax.swing.JPanel {
             }
         });
 
-        deleteButton.setBackground(new java.awt.Color(0, 0, 51));
+        deleteButton.setBackground(new java.awt.Color(38, 55, 85));
         deleteButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         deleteButton.setForeground(new java.awt.Color(255, 255, 204));
         deleteButton.setText("Delete Cart Item");
@@ -175,7 +176,7 @@ public class PlaceOrderJPanel extends javax.swing.JPanel {
         orderTotalText.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
         orderTotalText.setText("$0.0");
 
-        placeOrderButton.setBackground(new java.awt.Color(0, 0, 51));
+        placeOrderButton.setBackground(new java.awt.Color(38, 55, 85));
         placeOrderButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         placeOrderButton.setForeground(new java.awt.Color(255, 255, 204));
         placeOrderButton.setText("Place Order");
