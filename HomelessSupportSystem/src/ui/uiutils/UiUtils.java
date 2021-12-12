@@ -16,7 +16,8 @@ public class UiUtils {
     public static void nextScreen(JPanel container, JPanel nextPanel, 
             String nextPanelName) {
         CardLayout layout = (CardLayout) container.getLayout();
-        container.add("workArea", new JScrollPane(nextPanel));
+        //container.add("workArea", new JScrollPane(nextPanel));
+        container.add("workArea", nextPanel);
         layout.next(container);
     }
     
