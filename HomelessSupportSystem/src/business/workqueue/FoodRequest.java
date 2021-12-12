@@ -4,6 +4,7 @@
  */
 package business.workqueue;
 
+import business.food.MenuItemOrder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.List;
  *
  * @author anu61
  */
-public class FoodRequest {
+public class FoodRequest extends WorkRequest {
     
     private List<MenuItemOrder> order;
     
