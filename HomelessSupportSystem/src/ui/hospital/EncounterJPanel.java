@@ -5,6 +5,8 @@
 package ui.hospital;
 
 import business.EcoSystem;
+import business.healthcare.VitalSigns;
+import business.individuals.HomelessIndividual;
 import business.individuals.Individual;
 import business.useraccount.UserAccount;
 import java.util.Collections;

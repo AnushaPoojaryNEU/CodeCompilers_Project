@@ -5,6 +5,8 @@
 package ui.hospital;
 
 import business.EcoSystem;
+import business.healthcare.VitalSigns;
+import business.individuals.HomelessIndividual;
 import business.individuals.Individual;
 import business.useraccount.UserAccount;
 import business.workqueue.DoctorAppointmentWorkRequest;
@@ -71,10 +73,12 @@ public class DoctorJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel1.setText("Select Appointment - ");
 
         encounterTable.setBackground(new java.awt.Color(253, 253, 223));
         encounterTable.setBorder(new javax.swing.border.MatteBorder(null));
+        encounterTable.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         encounterTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -100,7 +104,8 @@ public class DoctorJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(encounterTable);
 
-        jLabel2.setText("Problem Summary");
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel2.setText("Problem Summary:");
 
         summaryText.setEditable(false);
         summaryText.setBackground(new java.awt.Color(255, 255, 255));
@@ -115,27 +120,33 @@ public class DoctorJPanel extends javax.swing.JPanel {
         descText.setRows(5);
         jScrollPane2.setViewportView(descText);
 
-        jLabel3.setText("Description");
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel3.setText("Description:");
 
-        jLabel4.setText("Diagnosis");
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel4.setText("Diagnosis:");
 
         diagnosisText.setColumns(20);
         diagnosisText.setRows(5);
         jScrollPane3.setViewportView(diagnosisText);
 
-        jLabel5.setText("Prescription");
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel5.setText("Prescription:");
 
         preText.setColumns(20);
         preText.setRows(5);
         jScrollPane4.setViewportView(preText);
 
+        submitButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         submitButton.setText("Submit");
+        submitButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         submitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitButtonActionPerformed(evt);
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel6.setText("Patient's vital signs history - ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -219,7 +230,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 633, Short.MAX_VALUE)
+            .addGap(0, 647, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
