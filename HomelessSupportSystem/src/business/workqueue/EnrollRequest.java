@@ -4,6 +4,7 @@
  */
 package business.workqueue;
 
+import business.training.Course;
 import business.useraccount.UserAccount;
 
 /**
