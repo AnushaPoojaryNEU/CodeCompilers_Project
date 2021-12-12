@@ -65,9 +65,9 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel2.setText("Password :");
 
-        addButton.setBackground(new java.awt.Color(253, 253, 223));
+        addButton.setBackground(new java.awt.Color(38, 55, 85));
         addButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        addButton.setForeground(new java.awt.Color(38, 55, 85));
+        addButton.setForeground(new java.awt.Color(253, 253, 223));
         addButton.setText("Add");
         addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,8 +75,9 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        updateButton.setBackground(new java.awt.Color(253, 253, 223));
+        updateButton.setBackground(new java.awt.Color(38, 55, 85));
         updateButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        updateButton.setForeground(new java.awt.Color(253, 253, 223));
         updateButton.setText("Update");
         updateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,9 +85,9 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        deleteButton.setBackground(new java.awt.Color(253, 253, 223));
+        deleteButton.setBackground(new java.awt.Color(38, 55, 85));
         deleteButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        deleteButton.setForeground(new java.awt.Color(38, 55, 85));
+        deleteButton.setForeground(new java.awt.Color(253, 253, 223));
         deleteButton.setText("Delete");
         deleteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
