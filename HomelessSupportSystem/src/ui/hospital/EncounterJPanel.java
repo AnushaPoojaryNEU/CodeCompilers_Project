@@ -209,11 +209,11 @@ public class EncounterJPanel extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(addButton)
-                .addGap(74, 74, 74)
+                .addGap(71, 71, 71)
                 .addComponent(updateButton)
-                .addGap(79, 79, 79)
+                .addGap(74, 74, 74)
                 .addComponent(deleteButton)
-                .addGap(488, 488, 488))
+                .addGap(493, 493, 493))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
