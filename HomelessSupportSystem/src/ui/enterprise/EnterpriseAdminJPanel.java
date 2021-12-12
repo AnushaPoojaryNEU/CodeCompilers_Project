@@ -25,8 +25,7 @@ public class EnterpriseAdminJPanel extends javax.swing.JPanel {
         this.container = container;
         this.userAccount = account;
         this.system = system;
-        titleLabel.setText(system.getEnterpriseDirectory(
-            ).findEnterpriseOfUserAccount(account).getName());
+        titleLabel.setText(system.getEnterpriseDirectory().findEnterpriseOfUserAccount(account).getName());
     }
 
     /**
@@ -39,6 +38,7 @@ public class EnterpriseAdminJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         manageEmployeesButton = new javax.swing.JButton();
+        titleLabel = new javax.swing.JLabel();
 
         manageEmployeesButton.setText("Manage Employees");
         manageEmployeesButton.addActionListener(new java.awt.event.ActionListener() {
@@ -47,11 +47,16 @@ public class EnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
 
+        titleLabel.setText("jLabel1");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(138, 138, 138)
+                .addComponent(titleLabel)
+                .addContainerGap(221, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(105, 105, 105)
@@ -60,7 +65,10 @@ public class EnterpriseAdminJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(titleLabel)
+                .addContainerGap(250, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(109, 109, 109)
@@ -78,5 +86,6 @@ public class EnterpriseAdminJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton manageEmployeesButton;
+    private javax.swing.JLabel titleLabel;
     // End of variables declaration//GEN-END:variables
 }
