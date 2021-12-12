@@ -4,6 +4,7 @@
  */
 package business.workqueue;
 
+import business.individuals.HomelessIndividual;
 import business.useraccount.UserAccount;
 import java.util.ArrayList;
 import java.util.Collections;
