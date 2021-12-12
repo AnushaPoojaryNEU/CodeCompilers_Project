@@ -47,9 +47,9 @@ public class SysAdminJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(253, 253, 223));
 
-        hospitalButton.setBackground(new java.awt.Color(253, 253, 223));
+        hospitalButton.setBackground(new java.awt.Color(38, 55, 85));
         hospitalButton.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        hospitalButton.setForeground(new java.awt.Color(38, 55, 85));
+        hospitalButton.setForeground(new java.awt.Color(253, 253, 223));
         hospitalButton.setText("Manage Hospital Enterprise Admin");
         hospitalButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         hospitalButton.addActionListener(new java.awt.event.ActionListener() {
@@ -58,9 +58,9 @@ public class SysAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        foodButton.setBackground(new java.awt.Color(253, 253, 223));
+        foodButton.setBackground(new java.awt.Color(38, 55, 85));
         foodButton.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        foodButton.setForeground(new java.awt.Color(38, 55, 85));
+        foodButton.setForeground(new java.awt.Color(253, 253, 223));
         foodButton.setText("Manage Food Enterprise Admin");
         foodButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         foodButton.addActionListener(new java.awt.event.ActionListener() {
@@ -69,9 +69,9 @@ public class SysAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        trainingButton.setBackground(new java.awt.Color(253, 253, 223));
+        trainingButton.setBackground(new java.awt.Color(38, 55, 85));
         trainingButton.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        trainingButton.setForeground(new java.awt.Color(38, 55, 85));
+        trainingButton.setForeground(new java.awt.Color(253, 253, 223));
         trainingButton.setText("Manage Training Center Enterprise Admin");
         trainingButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         trainingButton.addActionListener(new java.awt.event.ActionListener() {
@@ -80,9 +80,9 @@ public class SysAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        shelterButton.setBackground(new java.awt.Color(253, 253, 223));
+        shelterButton.setBackground(new java.awt.Color(38, 55, 85));
         shelterButton.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        shelterButton.setForeground(new java.awt.Color(38, 55, 85));
+        shelterButton.setForeground(new java.awt.Color(253, 253, 223));
         shelterButton.setText("Manage Shelter Monitoring Enterprise Admin");
         shelterButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         shelterButton.addActionListener(new java.awt.event.ActionListener() {
