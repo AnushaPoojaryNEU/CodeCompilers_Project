@@ -86,7 +86,7 @@ public class AcceptRejectOrders extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setText("Accept or Reject Orders");
 
-        backButton.setBackground(new java.awt.Color(0, 0, 51));
+        backButton.setBackground(new java.awt.Color(38, 55, 85));
         backButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         backButton.setForeground(new java.awt.Color(255, 255, 204));
         backButton.setText("Back");
@@ -102,7 +102,7 @@ public class AcceptRejectOrders extends javax.swing.JPanel {
             }
         });
 
-        acceptButton.setBackground(new java.awt.Color(0, 0, 51));
+        acceptButton.setBackground(new java.awt.Color(38, 55, 85));
         acceptButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         acceptButton.setForeground(new java.awt.Color(255, 255, 204));
         acceptButton.setText("Accept");
@@ -112,7 +112,7 @@ public class AcceptRejectOrders extends javax.swing.JPanel {
             }
         });
 
-        rejectButton.setBackground(new java.awt.Color(0, 0, 51));
+        rejectButton.setBackground(new java.awt.Color(38, 55, 85));
         rejectButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         rejectButton.setForeground(new java.awt.Color(255, 255, 204));
         rejectButton.setText("Reject");

@@ -114,7 +114,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(workRequestJTable);
 
-        assignJButton.setBackground(new java.awt.Color(0, 0, 51));
+        assignJButton.setBackground(new java.awt.Color(38, 55, 85));
         assignJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         assignJButton.setForeground(new java.awt.Color(255, 255, 204));
         assignJButton.setText("Assign to me");
@@ -124,7 +124,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        processJButton.setBackground(new java.awt.Color(0, 0, 51));
+        processJButton.setBackground(new java.awt.Color(38, 55, 85));
         processJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         processJButton.setForeground(new java.awt.Color(255, 255, 204));
         processJButton.setText("Process");

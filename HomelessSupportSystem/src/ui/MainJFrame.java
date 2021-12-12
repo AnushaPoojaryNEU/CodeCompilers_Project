@@ -34,7 +34,7 @@ public class MainJFrame extends javax.swing.JFrame {
 //        this.setSize(1350, screenSize.height);
         //this.setResizable(false);
         
-        this.setSize(1350, 1000);
+        this.setSize(1200, 720);
     }
 
     /**
@@ -59,6 +59,10 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
+
+        btnLogin.setBackground(new java.awt.Color(38, 55, 85));
+        btnLogin.setForeground(new java.awt.Color(255, 255, 204));
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,6 +70,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnLogout.setBackground(new java.awt.Color(38, 55, 85));
+        btnLogout.setForeground(new java.awt.Color(255, 255, 204));
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,6 +128,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jSplitPane1.setLeftComponent(jPanel1);
 
+        rightJPanel.setBackground(new java.awt.Color(255, 255, 204));
         rightJPanel.setLayout(new java.awt.CardLayout());
         jSplitPane1.setRightComponent(rightJPanel);
 
@@ -178,7 +185,9 @@ public class MainJFrame extends javax.swing.JFrame {
         passwordField.setText("");
 
         rightJPanel.removeAll();
-        UiUtils.nextScreen(rightJPanel, new JPanel() , "blank");
+        JPanel panel = new JPanel();
+        panel.setBackground(new java.awt.Color(255, 255, 204));
+        UiUtils.nextScreen(rightJPanel, panel , "blank");
 //        JPanel blankJP = new JPanel();
 //        rightJpanel.add("blank", blankJP);
 //        CardLayout crdLyt = (CardLayout) rightJpanel.getLayout();

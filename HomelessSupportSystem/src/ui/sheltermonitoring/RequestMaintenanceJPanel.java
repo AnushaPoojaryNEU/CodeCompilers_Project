@@ -58,6 +58,9 @@ public class RequestMaintenanceJPanel extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         commentsText = new javax.swing.JTextArea();
 
+        setBackground(new java.awt.Color(255, 255, 204));
+
+        table.setBackground(new java.awt.Color(255, 255, 204));
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -86,6 +89,8 @@ public class RequestMaintenanceJPanel extends javax.swing.JPanel {
         titleLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         titleLabel.setText("Submit Maintenance Request");
 
+        backButton.setBackground(new java.awt.Color(38, 55, 85));
+        backButton.setForeground(new java.awt.Color(255, 255, 204));
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,6 +102,8 @@ public class RequestMaintenanceJPanel extends javax.swing.JPanel {
 
         jLabel2.setText("Comments");
 
+        submitButton.setBackground(new java.awt.Color(38, 55, 85));
+        submitButton.setForeground(new java.awt.Color(255, 255, 204));
         submitButton.setText("Submit");
         submitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

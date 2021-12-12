@@ -46,10 +46,14 @@ public class FoodSupplyManagerJPanel extends javax.swing.JPanel {
         ordersButton = new javax.swing.JButton();
         menuButton = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 204));
+
         titleText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         titleText.setText("Welcome, ");
 
+        ordersButton.setBackground(new java.awt.Color(38, 55, 85));
         ordersButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        ordersButton.setForeground(new java.awt.Color(255, 255, 204));
         ordersButton.setText("Manage Orders");
         ordersButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,7 +61,9 @@ public class FoodSupplyManagerJPanel extends javax.swing.JPanel {
             }
         });
 
+        menuButton.setBackground(new java.awt.Color(38, 55, 85));
         menuButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        menuButton.setForeground(new java.awt.Color(255, 255, 204));
         menuButton.setText("Manage Menu");
         menuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

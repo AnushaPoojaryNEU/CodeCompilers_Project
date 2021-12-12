@@ -53,9 +53,12 @@ public class MaintenanceCrewJPanel extends javax.swing.JPanel {
         assignButton = new javax.swing.JButton();
         completeButton = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 204));
+
         titleLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         titleLabel.setText("Handle Maintenance Requests");
 
+        table.setBackground(new java.awt.Color(255, 255, 204));
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -81,6 +84,8 @@ public class MaintenanceCrewJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(table);
 
+        assignButton.setBackground(new java.awt.Color(38, 55, 85));
+        assignButton.setForeground(new java.awt.Color(255, 255, 204));
         assignButton.setText("Assign to me");
         assignButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,6 +93,8 @@ public class MaintenanceCrewJPanel extends javax.swing.JPanel {
             }
         });
 
+        completeButton.setBackground(new java.awt.Color(38, 55, 85));
+        completeButton.setForeground(new java.awt.Color(255, 255, 204));
         completeButton.setText("Mark Complete");
         completeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,12 +107,10 @@ public class MaintenanceCrewJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(assignButton, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(completeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)

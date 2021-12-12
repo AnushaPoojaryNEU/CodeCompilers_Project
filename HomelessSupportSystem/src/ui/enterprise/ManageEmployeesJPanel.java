@@ -74,9 +74,11 @@ public class ManageEmployeesJPanel extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         roleCombo = new javax.swing.JComboBox<>();
 
+
         setBackground(new java.awt.Color(253, 253, 223));
 
         jPanel1.setBackground(new java.awt.Color(253, 253, 223));
+
 
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -106,7 +108,9 @@ public class ManageEmployeesJPanel extends javax.swing.JPanel {
         titleLabel.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         titleLabel.setText("Title");
 
+
         backButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,8 +125,10 @@ public class ManageEmployeesJPanel extends javax.swing.JPanel {
         jLabel2.setText("Password :");
 
         addButton.setBackground(new java.awt.Color(38, 55, 85));
+
         addButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         addButton.setForeground(new java.awt.Color(253, 253, 223));
+
         addButton.setText("Add");
         addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,8 +137,10 @@ public class ManageEmployeesJPanel extends javax.swing.JPanel {
         });
 
         updateButton.setBackground(new java.awt.Color(38, 55, 85));
+
         updateButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         updateButton.setForeground(new java.awt.Color(253, 253, 223));
+
         updateButton.setText("Update");
         updateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,8 +149,10 @@ public class ManageEmployeesJPanel extends javax.swing.JPanel {
         });
 
         deleteButton.setBackground(new java.awt.Color(38, 55, 85));
+
         deleteButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         deleteButton.setForeground(new java.awt.Color(253, 253, 223));
+
         deleteButton.setText("Delete");
         deleteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,11 +200,14 @@ public class ManageEmployeesJPanel extends javax.swing.JPanel {
                             .addComponent(jLabel8))
                         .addGap(37, 37, 37)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+
                             .addComponent(passwordText, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
+
                             .addComponent(nameText)
                             .addComponent(usernameText)
                             .addComponent(addressText)
                             .addComponent(cityText)
+
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(roleCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -213,6 +226,7 @@ public class ManageEmployeesJPanel extends javax.swing.JPanel {
                 .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(355, 355, 355)
                 .addComponent(titleLabel)
+
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -245,6 +259,7 @@ public class ManageEmployeesJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel4))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+
                     .addComponent(cityText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(18, 18, 18)
@@ -265,12 +280,14 @@ public class ManageEmployeesJPanel extends javax.swing.JPanel {
                     .addComponent(updateButton)
                     .addComponent(addButton))
                 .addContainerGap(37, Short.MAX_VALUE))
+
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+
             .addGroup(layout.createSequentialGroup()
                 .addGap(110, 110, 110)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -282,6 +299,7 @@ public class ManageEmployeesJPanel extends javax.swing.JPanel {
                 .addGap(36, 36, 36)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(110, Short.MAX_VALUE))
+
         );
     }// </editor-fold>//GEN-END:initComponents
 

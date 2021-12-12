@@ -106,7 +106,7 @@ public class FoodOrderJPanel extends javax.swing.JPanel {
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Order Food for Community");
 
-        newOrderButton.setBackground(new java.awt.Color(0, 0, 51));
+        newOrderButton.setBackground(new java.awt.Color(38, 55, 85));
         newOrderButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         newOrderButton.setForeground(new java.awt.Color(255, 255, 204));
         newOrderButton.setText("Place New Order");

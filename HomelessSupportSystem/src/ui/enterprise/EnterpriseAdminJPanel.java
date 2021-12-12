@@ -41,11 +41,13 @@ public class EnterpriseAdminJPanel extends javax.swing.JPanel {
         titleLabel = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
+
         setBackground(new java.awt.Color(253, 253, 223));
 
         manageEmployeesButton.setBackground(new java.awt.Color(38, 55, 85));
         manageEmployeesButton.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         manageEmployeesButton.setForeground(new java.awt.Color(253, 253, 223));
+
         manageEmployeesButton.setText("Manage Employees");
         manageEmployeesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
