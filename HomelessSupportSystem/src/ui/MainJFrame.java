@@ -35,6 +35,8 @@ public class MainJFrame extends javax.swing.JFrame {
         //this.setResizable(false);
         
         this.setSize(1200, 720);
+        JPanel panel = new HomeScreen();
+        UiUtils.nextScreen(rightJPanel, panel , "blank");
     }
 
     /**
@@ -83,6 +85,8 @@ public class MainJFrame extends javax.swing.JFrame {
 
         lblPassword.setText("Password:");
 
+        btnSignUp.setBackground(new java.awt.Color(38, 55, 85));
+        btnSignUp.setForeground(new java.awt.Color(255, 255, 204));
         btnSignUp.setText("Sign Up");
         btnSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,8 +189,7 @@ public class MainJFrame extends javax.swing.JFrame {
         passwordField.setText("");
 
         rightJPanel.removeAll();
-        JPanel panel = new JPanel();
-        panel.setBackground(new java.awt.Color(255, 255, 204));
+        JPanel panel = new HomeScreen();
         UiUtils.nextScreen(rightJPanel, panel , "blank");
 //        JPanel blankJP = new JPanel();
 //        rightJpanel.add("blank", blankJP);
