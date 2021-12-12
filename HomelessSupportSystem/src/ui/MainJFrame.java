@@ -34,7 +34,7 @@ public class MainJFrame extends javax.swing.JFrame {
 //        this.setSize(1350, screenSize.height);
         //this.setResizable(false);
         
-        this.setSize(1350, 1000);
+        this.setSize(1200, 720);
     }
 
     /**
