@@ -4,13 +4,19 @@
  */
 package business;
 
-import business.employee.Employee;
+import business.enterprise.Enterprise;
+import business.enterprise.EnterpriseDirectory;
+import business.enterprise.FoodEnterprise;
+import business.enterprise.HospitalEnterprise;
+import business.enterprise.ShelterMonitoringEnterprise;
+import business.enterprise.TrainingCenterEnterprise;
 import business.individuals.IndividualDirectory;
 import business.organization.Organization;
-import business.network.Network;
 import business.role.Role;
+import business.role.SystemAdminRole;
 import business.useraccount.UserAccount;
 import business.useraccount.UserAccountDirectory;
+import business.workqueue.WorkRequestManager;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,20 +26,54 @@ import java.util.Map;
  *
  * @author anu61
  */
-public class EcoSystem extends Organization {
+public class EcoSystem  {
     
    private static EcoSystem ecoSystem; 
    private UserAccountDirectory userAccountDirectory;
-   private IndividualDirectory individualDirectory;
-   private Map<Employee, UserAccount> employeeMap; 
-   private List<Network> networkList;
+   private EnterpriseDirectory enterpriseDirectory;
+   private FoodEnterprise foodEnterprise;
+   private HospitalEnterprise hospitalEnterprise;
+   private TrainingCenterEnterprise trainingCenterEnterprise;
+   private ShelterMonitoringEnterprise shelterMonitoringEnterprise;
+   private WorkRequestManager workRequestManager;
    
    public EcoSystem() {
-        super(null);
-        this.userAccountDirectory = userAccountDirectory;
-        this.networkList = new ArrayList();
-        this.individualDirectory = individualDirectory;
+        enterpriseDirectory = new EnterpriseDirectory();
+        foodEnterprise = new FoodEnterprise("Food Enterprise", "1 Huntington St Boston 02120");
+        hospitalEnterprise = new HospitalEnterprise("Hospital Enterprise", "10 Huntington St Boston 02120");
+        trainingCenterEnterprise = new TrainingCenterEnterprise("Training Center Enterprise", "20 Huntington St Boston 02120");
+        shelterMonitoringEnterprise = new ShelterMonitoringEnterprise("Shelter Monitoring Enterprise", "111 Huntington St Boston 02120");
+        enterpriseDirectory.addEnterprise(foodEnterprise);
+        enterpriseDirectory.addEnterprise(hospitalEnterprise);
+        enterpriseDirectory.addEnterprise(trainingCenterEnterprise);
+        enterpriseDirectory.addEnterprise(shelterMonitoringEnterprise);
+        
+        workRequestManager = new WorkRequestManager();
+        this.userAccountDirectory = new UserAccountDirectory();
    }
+   
+    public UserAccountDirectory getUserAccountDirectory() {
+        return userAccountDirectory;
+    }
+    
+    public UserAccount authenticateUser(String username, String password){
+        UserAccount ua = userAccountDirectory.authenticateUser(username, password);
+        if (ua != null) 
+            return ua;
+        ua = enterpriseDirectory.authenticateUser(username, password);
+        if (ua != null) 
+            return ua;
+        return null;
+    }
+    
+    public void addUserAccount(UserAccount ua, Enterprise enterprise) {
+        if (ua.getRole() instanceof SystemAdminRole) {
+            userAccountDirectory.getUserAccountList().add(ua);
+            return;
+        }
+        enterpriseDirectory.addUserAccount(ua, enterprise);
+    }
+    
    
     public static EcoSystem getInstance() {
         if (ecoSystem == null) {
@@ -42,66 +82,28 @@ public class EcoSystem extends Organization {
         return ecoSystem;
     }
 
-    public UserAccountDirectory getUserAccountDirectory() {
-        if (userAccountDirectory == null) {
-            userAccountDirectory = new UserAccountDirectory();
-        }
-        return userAccountDirectory;
+    public FoodEnterprise getFoodEnterprise() {
+        return foodEnterprise;
     }
 
-//    public void setUserAccountDirectory(UserAccountDirectory userAccountDirectory) {
-//        this.userAccountDirectory = userAccountDirectory;
-//    }
-
-    public List<Network> getNetworkList() {
-        return networkList;
+    public HospitalEnterprise getHospitalEnterprise() {
+        return hospitalEnterprise;
     }
 
-    public void setNetworkList(List<Network> networkList) {
-        this.networkList = networkList;
-    }
-    
-    public Network createNetwork() {
-       
-      Network network = new Network();
-      networkList.add(network);
-      return network;
+    public TrainingCenterEnterprise getTrainingCenterEnterprise() {
+        return trainingCenterEnterprise;
     }
 
-    public IndividualDirectory getIndividualDirectory() {
-        return individualDirectory;
+    public ShelterMonitoringEnterprise getShelterMonitoringEnterprise() {
+        return shelterMonitoringEnterprise;
     }
 
-    public void setIndividualDirectory(IndividualDirectory individualDirectory) {
-        this.individualDirectory = individualDirectory;
+    public EnterpriseDirectory getEnterpriseDirectory() {
+        return enterpriseDirectory;
     }
 
-    public Map<Employee, UserAccount> getEmployeeMap() {
-        if(employeeMap == null)
-        {
-            employeeMap = new HashMap<>();
-        }
-        return employeeMap;
-    }
-
-    public void setEmployeeMap(Map<Employee, UserAccount> employeeMap) {
-        this.employeeMap = employeeMap;
-    }
-    
-    
-    
-     @Override
-    public List<Role> getSupportedRole() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
-     public boolean checkIfNetworkIsUnique(String name){
-        for (Network net : networkList){
-            if(net.getName().equalsIgnoreCase(name))
-            return false;
-        }
-        return true;
+    public WorkRequestManager getWorkRequestManager() {
+        return workRequestManager;
     }
     
     
