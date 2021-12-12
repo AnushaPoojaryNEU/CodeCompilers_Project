@@ -41,6 +41,9 @@ public class WorkRequestManager {
     }
     
     public ArrayList<WorkRequest> getWorkRequestForUser(UserAccount ua) {
+        if (workReqMap.containsKey(ua) == false) {
+            workReqMap.put(ua, new ArrayList<>());
+        }
         return workReqMap.getOrDefault(ua, null);
     }
     

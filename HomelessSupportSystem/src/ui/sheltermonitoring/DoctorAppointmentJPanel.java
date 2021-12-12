@@ -60,6 +60,9 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
         requestButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 204));
+
+        table.setBackground(new java.awt.Color(255, 255, 204));
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -89,6 +92,8 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
         commentsText.setRows(5);
         jScrollPane2.setViewportView(commentsText);
 
+        requestButton.setBackground(new java.awt.Color(38, 55, 85));
+        requestButton.setForeground(new java.awt.Color(255, 255, 204));
         requestButton.setText("Request for an appointment with a doctor");
         requestButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +101,8 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
             }
         });
 
+        backButton.setBackground(new java.awt.Color(38, 55, 85));
+        backButton.setForeground(new java.awt.Color(255, 255, 204));
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,7 +117,7 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -129,7 +136,7 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(problemText))))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 247, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(

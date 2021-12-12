@@ -40,6 +40,10 @@ public class EnterpriseAdminJPanel extends javax.swing.JPanel {
         manageEmployeesButton = new javax.swing.JButton();
         titleLabel = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 204));
+
+        manageEmployeesButton.setBackground(new java.awt.Color(38, 55, 85));
+        manageEmployeesButton.setForeground(new java.awt.Color(255, 255, 204));
         manageEmployeesButton.setText("Manage Employees");
         manageEmployeesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
