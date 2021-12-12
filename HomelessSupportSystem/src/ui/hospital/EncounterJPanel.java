@@ -76,7 +76,7 @@ public class EncounterJPanel extends javax.swing.JPanel {
         encounterTable = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(253, 253, 223));
+        setBackground(new java.awt.Color(255, 255, 204));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel6.setText("Temperature:");

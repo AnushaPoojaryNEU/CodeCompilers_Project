@@ -68,7 +68,7 @@ public class ProgramManagerJPanel extends javax.swing.JPanel {
         acceptButton = new javax.swing.JButton();
         rejectButton = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(253, 253, 223));
+        setBackground(new java.awt.Color(255, 255, 204));
 
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

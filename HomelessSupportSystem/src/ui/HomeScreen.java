@@ -20,7 +20,7 @@ public class HomeScreen extends javax.swing.JPanel {
     public HomeScreen() {
         initComponents();
         imageLabel.setIcon(new ImageIcon(new ImageIcon("images/mainpage.png").getImage(
-                ).getScaledInstance(900, 700, Image.SCALE_DEFAULT)));
+                ).getScaledInstance(1000, 700, Image.SCALE_DEFAULT)));
     }
 
     /**

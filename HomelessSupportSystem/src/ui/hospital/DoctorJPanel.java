@@ -69,7 +69,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(253, 253, 223));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
 
         patientCBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

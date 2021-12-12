@@ -65,7 +65,7 @@ public class InstructorJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(253, 253, 223));
 
-        jPanel1.setBackground(new java.awt.Color(253, 253, 223));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
 
         table.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         table.setModel(new javax.swing.table.DefaultTableModel(

@@ -60,6 +60,10 @@ public class SignUpJPanel extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         ageText = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(255, 255, 204));
+
+        backButton.setBackground(new java.awt.Color(38, 55, 85));
+        backButton.setForeground(new java.awt.Color(255, 255, 204));
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +79,8 @@ public class SignUpJPanel extends javax.swing.JPanel {
 
         jLabel5.setText("City");
 
+        signUpButton.setBackground(new java.awt.Color(38, 55, 85));
+        signUpButton.setForeground(new java.awt.Color(255, 255, 204));
         signUpButton.setText("Sign Up");
         signUpButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

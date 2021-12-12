@@ -74,7 +74,7 @@ public class ManageEmployeesJPanel extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         roleCombo = new javax.swing.JComboBox<>();
 
-        setBackground(new java.awt.Color(253, 253, 223));
+        setBackground(new java.awt.Color(255, 255, 204));
 
         jPanel1.setBackground(new java.awt.Color(253, 253, 223));
 

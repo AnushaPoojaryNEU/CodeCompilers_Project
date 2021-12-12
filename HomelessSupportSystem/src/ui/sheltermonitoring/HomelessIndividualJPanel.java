@@ -7,6 +7,8 @@ package ui.sheltermonitoring;
 
 import business.EcoSystem;
 import business.useraccount.UserAccount;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import ui.uiutils.UiUtils;
 
@@ -30,6 +32,9 @@ public class HomelessIndividualJPanel extends javax.swing.JPanel {
         this.system = system;
         
         titleLabel.setText("Welcome, " + account.getIndividual().getName());
+        
+        imgthree.setIcon(new ImageIcon(new ImageIcon("images/homelesswelcome.png").getImage(
+                ).getScaledInstance(250, 250, Image.SCALE_DEFAULT)));
     }
 
     /**
@@ -45,6 +50,7 @@ public class HomelessIndividualJPanel extends javax.swing.JPanel {
         docButton = new javax.swing.JButton();
         maintenanceButton = new javax.swing.JButton();
         titleLabel = new javax.swing.JLabel();
+        imgthree = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 204));
 
@@ -94,6 +100,10 @@ public class HomelessIndividualJPanel extends javax.swing.JPanel {
                             .addComponent(enrollButton, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(docButton, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(162, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(imgthree)
+                .addGap(77, 77, 77))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,7 +116,9 @@ public class HomelessIndividualJPanel extends javax.swing.JPanel {
                 .addComponent(maintenanceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(enrollButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(imgthree)
+                .addContainerGap(152, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -134,6 +146,7 @@ public class HomelessIndividualJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton docButton;
     private javax.swing.JButton enrollButton;
+    private javax.swing.JLabel imgthree;
     private javax.swing.JButton maintenanceButton;
     private javax.swing.JLabel titleLabel;
     // End of variables declaration//GEN-END:variables

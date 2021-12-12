@@ -8,8 +8,10 @@ package ui.sheltermonitoring;
 import business.EcoSystem;
 import business.useraccount.UserAccount;
 import business.workqueue.MaintenanceRequest;
+import java.awt.Image;
 import java.util.ArrayList;
 import java.util.Collections;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -36,6 +38,9 @@ public class RequestMaintenanceJPanel extends javax.swing.JPanel {
         this.account = account;
         this.system = system;
         populateTable();
+        
+        imgfive.setIcon(new ImageIcon(new ImageIcon("images/maintenance.jpg").getImage(
+                ).getScaledInstance(500, 300, Image.SCALE_DEFAULT)));
     }
 
     /**
@@ -57,6 +62,7 @@ public class RequestMaintenanceJPanel extends javax.swing.JPanel {
         submitButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         commentsText = new javax.swing.JTextArea();
+        imgfive = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 204));
 
@@ -136,11 +142,15 @@ public class RequestMaintenanceJPanel extends javax.swing.JPanel {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(issueText, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
                                 .addComponent(jScrollPane2)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(342, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 739, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(imgfive)
+                .addGap(212, 212, 212))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,7 +171,9 @@ public class RequestMaintenanceJPanel extends javax.swing.JPanel {
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
                 .addComponent(submitButton)
-                .addContainerGap(139, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(imgfive)
+                .addGap(97, 97, 97))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -193,6 +205,7 @@ public class RequestMaintenanceJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backButton;
     private javax.swing.JTextArea commentsText;
+    private javax.swing.JLabel imgfive;
     private javax.swing.JTextField issueText;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
