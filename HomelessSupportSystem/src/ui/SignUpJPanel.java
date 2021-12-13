@@ -11,6 +11,8 @@ import business.enterprise.ShelterMonitoringEnterprise;
 import business.enterprise.TrainingCenterEnterprise;
 import business.individuals.HomelessIndividual;
 import business.useraccount.UserAccount;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import ui.uiutils.ModelCreationUtil;
@@ -34,6 +36,9 @@ public class SignUpJPanel extends javax.swing.JPanel {
         this.container = container;
         this.system = system;
         this.db = dbUtil;
+        
+        imgelvn.setIcon(new ImageIcon(new ImageIcon("images/homelesswelcome.png").getImage(
+                ).getScaledInstance(250, 250, Image.SCALE_DEFAULT)));
     }
 
     /**
@@ -60,6 +65,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         ageText = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        imgelvn = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 204));
 
@@ -123,6 +129,10 @@ public class SignUpJPanel extends javax.swing.JPanel {
                             .addComponent(ageText, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(81, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(imgelvn)
+                .addGap(95, 95, 95))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,7 +167,9 @@ public class SignUpJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel7))
                 .addGap(29, 29, 29)
                 .addComponent(signUpButton)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addComponent(imgelvn)
+                .addContainerGap(107, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -207,6 +219,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField ageText;
     private javax.swing.JButton backButton;
     private javax.swing.JTextField cityText;
+    private javax.swing.JLabel imgelvn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
