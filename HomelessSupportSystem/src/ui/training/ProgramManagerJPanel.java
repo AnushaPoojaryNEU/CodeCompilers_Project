@@ -70,6 +70,7 @@ public class ProgramManagerJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 204));
 
+        table.setBackground(new java.awt.Color(255, 255, 204));
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -221,6 +222,7 @@ public class ProgramManagerJPanel extends javax.swing.JPanel {
         system.getTrainingCenterEnterprise(
             ).getCourseDirectory().enrollStudent(req.getSender(), req.getCourse());
         JOptionPane.showMessageDialog(this, "Enrollment request accepted.");
+        clearFields();
         populateTable();
     }//GEN-LAST:event_acceptButtonActionPerformed
 
@@ -235,6 +237,7 @@ public class ProgramManagerJPanel extends javax.swing.JPanel {
         EnrollRequest req = reqs.get(selectedRow);
         req.setStatus("Rejected");
         JOptionPane.showMessageDialog(this, "Enrollment request rejected.");
+        clearFields();
         populateTable();
     }//GEN-LAST:event_rejectButtonActionPerformed
 

@@ -220,6 +220,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         enterprise.getUserAccountDirectory().addUserAccount(ua);
         usernameTextField.setText("");
         passwordTextField.setText("");
+        JOptionPane.showMessageDialog(this, "Enterprise Admin added successfully.");
         populateTable();
     }//GEN-LAST:event_addButtonActionPerformed
 
@@ -242,6 +243,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         enterprise.getUserAccountDirectory().updateUserAccount(prevUsername, ua);
         usernameTextField.setText("");
         passwordTextField.setText("");
+        JOptionPane.showMessageDialog(this, "Enterprise Admin updated successfully.");
         populateTable();
     }//GEN-LAST:event_updateButtonActionPerformed
 
@@ -255,6 +257,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         }
         String username = (String) table.getValueAt(selectedRow, 0);
         enterprise.getUserAccountDirectory().deleteUserAccount(username);
+        JOptionPane.showMessageDialog(this, "Enterprise Admin deleted successfully.");
         populateTable();
     }//GEN-LAST:event_deleteButtonActionPerformed
 

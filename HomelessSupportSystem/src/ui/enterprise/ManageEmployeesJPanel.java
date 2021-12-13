@@ -118,7 +118,9 @@ public class ManageEmployeesJPanel extends javax.swing.JPanel {
         titleLabel.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         titleLabel.setText("Title");
 
+        backButton.setBackground(new java.awt.Color(38, 55, 85));
         backButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        backButton.setForeground(new java.awt.Color(255, 255, 204));
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
