@@ -7,6 +7,8 @@ package ui.food;
 
 import business.EcoSystem;
 import business.useraccount.UserAccount;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import ui.uiutils.UiUtils;
 
@@ -31,6 +33,10 @@ public class FoodSupplyManagerJPanel extends javax.swing.JPanel {
         this.system = system;
         
         titleText.setText("Welcome, " + account.getIndividual().getName());
+        
+        
+        imgsevn.setIcon(new ImageIcon(new ImageIcon("images/orderfood.jpg").getImage(
+                ).getScaledInstance(500, 400, Image.SCALE_DEFAULT)));
     }
 
     /**
@@ -45,6 +51,7 @@ public class FoodSupplyManagerJPanel extends javax.swing.JPanel {
         titleText = new javax.swing.JLabel();
         ordersButton = new javax.swing.JButton();
         menuButton = new javax.swing.JButton();
+        imgsevn = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 204));
 
@@ -79,24 +86,27 @@ public class FoodSupplyManagerJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(27, 27, 27)
-                        .addComponent(titleText))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ordersButton, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
+                            .addComponent(menuButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(titleText)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(257, 257, 257)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(menuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ordersButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(266, Short.MAX_VALUE))
+                        .addGap(371, 371, 371)
+                        .addComponent(imgsevn)))
+                .addContainerGap(452, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(titleText)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
-                .addComponent(menuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(ordersButton, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(163, 163, 163))
+                .addGap(39, 39, 39)
+                .addComponent(menuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56)
+                .addComponent(ordersButton, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(imgsevn)
+                .addContainerGap(247, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -113,6 +123,7 @@ public class FoodSupplyManagerJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel imgsevn;
     private javax.swing.JButton menuButton;
     private javax.swing.JButton ordersButton;
     private javax.swing.JLabel titleText;

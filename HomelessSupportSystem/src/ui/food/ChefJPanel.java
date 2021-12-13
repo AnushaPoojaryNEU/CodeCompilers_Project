@@ -41,6 +41,9 @@ public class ChefJPanel extends javax.swing.JPanel {
         table.setShowHorizontalLines(true);
         table.setShowVerticalLines(true);
         populateTable();
+        
+        imgnine.setIcon(new ImageIcon(new ImageIcon("images/resmenu.jpg").getImage(
+                ).getScaledInstance(400, 300, Image.SCALE_DEFAULT)));
     }
     
     private ArrayList<WorkRequest> getAcceptedOrders() {
@@ -82,6 +85,7 @@ public class ChefJPanel extends javax.swing.JPanel {
         processJButton = new javax.swing.JButton();
         imageTwo = new javax.swing.JLabel();
         titleText = new javax.swing.JLabel();
+        imgnine = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 204));
 
@@ -111,7 +115,7 @@ public class ChefJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(table);
 
-        processJButton.setBackground(new java.awt.Color(0, 0, 51));
+        processJButton.setBackground(new java.awt.Color(38, 55, 85));
         processJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         processJButton.setForeground(new java.awt.Color(255, 255, 204));
         processJButton.setText("Process");
@@ -139,6 +143,9 @@ public class ChefJPanel extends javax.swing.JPanel {
                         .addGap(23, 23, 23)
                         .addComponent(titleText)))
                 .addGap(6, 6, 6))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(imgnine)
+                .addGap(448, 448, 448))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,7 +155,10 @@ public class ChefJPanel extends javax.swing.JPanel {
                 .addGap(26, 26, 26)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
-                .addComponent(processJButton))
+                .addComponent(processJButton)
+                .addGap(56, 56, 56)
+                .addComponent(imgnine)
+                .addContainerGap(123, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -168,6 +178,7 @@ public class ChefJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel imageTwo;
+    private javax.swing.JLabel imgnine;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton processJButton;
     private javax.swing.JTable table;

@@ -68,8 +68,9 @@ public class ProgramManagerJPanel extends javax.swing.JPanel {
         acceptButton = new javax.swing.JButton();
         rejectButton = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(253, 253, 223));
+        setBackground(new java.awt.Color(255, 255, 204));
 
+        table.setBackground(new java.awt.Color(255, 255, 204));
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -146,11 +147,17 @@ public class ProgramManagerJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(445, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(219, 219, 219)
+                        .addGap(94, 94, 94)
+                        .addComponent(acceptButton)
+                        .addGap(70, 70, 70)
+                        .addComponent(rejectButton)
+                        .addGap(57, 57, 57)
+                        .addComponent(loadButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(137, 137, 137)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3)
@@ -160,22 +167,17 @@ public class ProgramManagerJPanel extends javax.swing.JPanel {
                             .addComponent(jScrollPane4)
                             .addComponent(jScrollPane2)
                             .addComponent(courseNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1003, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(194, 194, 194)
-                        .addComponent(acceptButton)
-                        .addGap(70, 70, 70)
-                        .addComponent(rejectButton)
-                        .addGap(57, 57, 57)
-                        .addComponent(loadButton)))
-                .addGap(428, 428, 428))
+                        .addGap(20, 20, 20)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 889, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(967, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(142, 142, 142)
+                .addGap(30, 30, 30)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(courseNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -187,12 +189,12 @@ public class ProgramManagerJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addGap(82, 82, 82)
+                .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(acceptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(loadButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rejectButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addContainerGap(312, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -220,6 +222,7 @@ public class ProgramManagerJPanel extends javax.swing.JPanel {
         system.getTrainingCenterEnterprise(
             ).getCourseDirectory().enrollStudent(req.getSender(), req.getCourse());
         JOptionPane.showMessageDialog(this, "Enrollment request accepted.");
+        clearFields();
         populateTable();
     }//GEN-LAST:event_acceptButtonActionPerformed
 
@@ -234,6 +237,7 @@ public class ProgramManagerJPanel extends javax.swing.JPanel {
         EnrollRequest req = reqs.get(selectedRow);
         req.setStatus("Rejected");
         JOptionPane.showMessageDialog(this, "Enrollment request rejected.");
+        clearFields();
         populateTable();
     }//GEN-LAST:event_rejectButtonActionPerformed
 

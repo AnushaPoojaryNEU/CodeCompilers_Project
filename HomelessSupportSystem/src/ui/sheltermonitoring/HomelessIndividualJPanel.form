@@ -38,6 +38,11 @@
               </Group>
               <EmptySpace pref="162" max="32767" attributes="0"/>
           </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="imgthree" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -51,7 +56,9 @@
               <Component id="maintenanceButton" min="-2" pref="60" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="enrollButton" min="-2" pref="60" max="-2" attributes="0"/>
-              <EmptySpace pref="170" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="imgthree" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="152" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -106,6 +113,8 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Welcome"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="imgthree">
     </Component>
   </SubComponents>
 </Form>

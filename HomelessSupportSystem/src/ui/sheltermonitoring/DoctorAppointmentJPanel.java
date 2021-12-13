@@ -9,9 +9,11 @@ import business.EcoSystem;
 import business.individuals.Employee;
 import business.useraccount.UserAccount;
 import business.workqueue.DoctorAppointmentWorkRequest;
+import java.awt.Image;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -38,6 +40,10 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
         this.system = system;
         
         populateTable();
+        
+        
+        imgfour.setIcon(new ImageIcon(new ImageIcon("images/docappt.jpg").getImage(
+                ).getScaledInstance(350, 250, Image.SCALE_DEFAULT)));
     }
 
     /**
@@ -59,6 +65,7 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
         commentsText = new javax.swing.JTextArea();
         requestButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
+        imgfour = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 204));
 
@@ -138,6 +145,10 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
                                             .addComponent(problemText))))))
                         .addGap(0, 247, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(imgfour)
+                .addGap(148, 148, 148))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,7 +169,9 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addComponent(requestButton)
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(imgfour)
+                .addContainerGap(108, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -196,6 +209,7 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backButton;
     private javax.swing.JTextArea commentsText;
+    private javax.swing.JLabel imgfour;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
