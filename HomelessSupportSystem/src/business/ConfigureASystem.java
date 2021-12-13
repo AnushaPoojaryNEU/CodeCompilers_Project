@@ -95,7 +95,7 @@ public class ConfigureASystem {
         
         // adding this to help with the development process. otherwise,
         // we would need to enter a lot of data everytime our model changes.
-        createEnterpriseAdmin(system.getFoodEnterprise(), "food", "food");
+        createEnterpriseAdmin(system.getFoodEnterprise(), "foodadmin", "foodadmin");
         createEnterpriseAdmin(system.getHospitalEnterprise(), "hosp", "hosp");
         createEnterpriseAdmin(system.getShelterMonitoringEnterprise(), "shel", "shel");
         createEnterpriseAdmin(system.getTrainingCenterEnterprise(), "train", "train");
